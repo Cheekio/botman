@@ -8,3 +8,7 @@ pep8.py
 .pydevproject
 *.db
 web
+# @waltz's emacs gitignore partee pak
+*~
+.#*
+#~#
