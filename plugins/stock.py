@@ -7,7 +7,7 @@ from util import hook, http
 def stock(inp):
     '''.stock <symbol> -- gets information about a stock symbol'''
 
-    url = 'http://www.google.com/ig/api?stock=%s'
+    url = 'http://finance.yahoo.com/d/quotes.csv?s=%s'
 
     parsed = http.get_xml(url, stock=inp)
 
