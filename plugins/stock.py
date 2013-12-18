@@ -5,7 +5,7 @@ from util import hook, http
 
 @hook.command
 def stock(inp):
-    '''.stock <symbol> -- gets information about a stock symbol'''
+    '''.stock <symbol> -- gets information about a stock symbol using YAHOO cause GOOGLE is a MEANIE'''
 
     url = 'http://finance.yahoo.com/d/quotes.csv?s=%s'
 
