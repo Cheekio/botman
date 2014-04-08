@@ -98,9 +98,9 @@ def markov(inp, db=None, bot=None, conn=None):
         less(db, conn, inp[0], inp[1])
     rand = random.random()
 
-    settings = get_settings(db)
+    #settings = get_settings(db)
     if settings:
-        if bool(settings[1]) and rand < (1.0/float(settings[2])) and inp[
+        if True and rand < (1.0/float(3) and inp[
                 1][0] != ".":
             output = get_random_row(db)
             say_chain(db, output, conn, inp[0])
@@ -180,29 +180,29 @@ def say_chain(db, output, conn, channel):
     conn.msg(channel, output)
 
 
-@hook.command
-def chain(inp, db=None, conn=None, chan=None):
-    """Creates a markov chain. Usage: .chain <seed word or phrase>"""
-    db_init(db)
-    say_chain(db, inp, conn, chan)
+#@hook.command
+#def chain(inp, db=None, conn=None, chan=None):
+#    """Creates a markov chain. Usage: .chain <seed word or phrase>"""
+#    db_init(db)
+#    say_chain(db, inp, conn, chan)
 
 
-@hook.command
-def markon(inp, db=None):
-    """Turns on Automatic Markov Chains with a frequency value.\
-     Usage: .markon 10  (use .markoff to turn off)"""
-    db_init(db)
-    try:
-        assert(int(inp) > 0)
-    except:
-        return "Need to include a positive integer"
-    set_settings(db, (True, int(inp)))
-    return "Markov, on! Will automatically generate a chain on \
-        message with {0} probability".format(str(1.0/float(inp))[:4])
+#@hook.command
+#def markon(inp, db=None):
+#    """Turns on Automatic Markov Chains with a frequency value.\
+#     Usage: .markon 10  (use .markoff to turn off)"""
+#    db_init(db)
+#    try:
+#        assert(int(inp) > 0)
+#    except:
+#        return "Need to include a positive integer"
+#    set_settings(db, (True, int(inp)))
+#    return "Markov, on! Will automatically generate a chain on \
+#        message with {0} probability".format(str(1.0/float(inp))[:4])
 
 
-@hook.regex("^.markoff$")
-def markoff(inp, db=None):
-    """Turns off Automatic Markov Chains"""
-    set_settings(db, (False, 1))
-    return "Markov, off! No more random bullshit in the chat."
+#@hook.regex("^.markoff$")
+#def markoff(inp, db=None):
+#    """Turns off Automatic Markov Chains"""
+#    set_settings(db, (False, 1))
+#    return "Markov, off! No more random bullshit in the chat."
