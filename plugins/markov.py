@@ -100,8 +100,7 @@ def markov(inp, db=None, bot=None, conn=None):
 
     #settings = get_settings(db)
     if settings:
-        if True and rand < (1.0/float(3) and inp[
-                1][0] != ".":
+        if True and rand < (1.0/float(3)) and inp[1][0] != ".":
             output = get_random_row(db)
             say_chain(db, output, conn, inp[0])
 
