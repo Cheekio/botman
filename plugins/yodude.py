@@ -5,6 +5,7 @@ import requests
 
 @hook.command
 def yodude(inp):
+    return "Test works"
     '''.yodude <username> -- it will yo someone, dude'''
     r = requests.post('http://yofor.me/' + inp + '/BOTMAN')
     if r.status_code == 200:
