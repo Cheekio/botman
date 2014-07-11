@@ -8,6 +8,6 @@ def yodude(inp):
     '''.yodude <username> -- it will yo someone, dude'''
     r = requests.post('http://yofor.me/' + inp + '/BOTMAN')
     if r.status_code == 200:
-      '''yo successful'''
+      return '''yo successful'''
     else:
-      '''yo failed'''
+      return '''yo failed'''
