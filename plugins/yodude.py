@@ -5,7 +5,7 @@ from util import hook#, http
 
 @hook.command
 def yodude(inp):
-    return "Test Works"
+    return "Test Works: {0}".format(inp)
 #    '''.yodude <username> -- it will yo someone, dude'''
 #    r = requests.post('http://yofor.me/' + inp + '/BOTMAN')
 #    if r.status_code == 200:
