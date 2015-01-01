@@ -1,0 +1,11 @@
+{
+  "connections":
+  {
+    "local irc":
+    {
+      "server": "chat.freenode.net",
+      "nick": "botman",
+      "channels": [ "#botwar" ]
+    }
+  }
+}
